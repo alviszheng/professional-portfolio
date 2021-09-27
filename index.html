@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <title>Alvis Zheng's Portfolio</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Alvis Zheng</h1>
+        <nav>
+            <ul class="nav-effects">
+                <a href="#about-me">About Me</a>
+                <a href="#work">Work</a>
+                <a href="#contact-me">Contact Me</a>
+                <a href="./assets/resume/alvis-zheng-cv.pdf" download>Resume</a>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-subtitle">
+            <span class="span-background">C'est La Vie!</span>
+        </div>
+    </section>
+
+    <!-- About Me article-->
+    <article>
+        <div id="about-me" class="about-me-wrapper">
+            <div class="about-me-grid-container">
+                <div class="about-me-title">
+                    <p>About Me</p>
+                </div>
+                <div class="about-me-item">
+                    <p>I am a program manager.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Work Projects article-->
+    <article>
+        <div id="work" class="work-wrapper">
+            <div class="work-container-grid">
+                <div class="work-item work-title">
+                    <p> Work </p>
+                </div>
+                <div onclick="projectClicked('code-refactor')" alt="Image Display of Digital Solution Page"
+                    title="Your Digital Solution landing Page" target="_blank" style="cursor: pointer;"
+                    class="code-refactor">
+                    <span class="span-background">
+                        <a href="https://alviszheng.github.io/code-refactor/">Your Digital solution </a>
+                    </span>
+                </div>
+                <div onclick="projectClicked('run-buddy')" alt="Image Display of Run Buddy Page"
+                    title="Run Buddy landing page" style="cursor: pointer;" class="run-buddy">
+                    <span class="span-background">
+                        <a href="https://alviszheng.github.io/run-buddy/">Run Buddy</a>
+                    </span>
+                </div>
+                <div onclick="projectClicked('conflict-resolution')" alt="Image Display of Conflict Resolution Page"
+                    title="Conflict Resolution landing page" style="cursor: pointer;" class="conflict-resolution">
+                    <span class="span-background">
+                        <a href="https://alviszheng.github.io/conflict-resolution/">Conflict Resolution </a>
+                    </span>
+                </div>
+                <div onclick="projectClicked('robot-gladiators')" alt="Image Display of Robot Gladiators landing Page"
+                    title="Robot Gladiators landing page" style="cursor: pointer;" class="robot-gladiators">
+                    <span class="span-background">
+                        <a href="https://alviszheng.github.io/robot-gladiators/">Robot Gladiators</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer-->
+    <footer>
+        <div id="contact-me" class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-contact-me">
+                    Contact Me
+                </div>
+                <div class="footer-phone">
+                    <a href="tel:408-340-8065" class="nav-effects">408-340-8065</a>
+                </div>
+                <div class="footer-email">
+                    <a href="mailto:alviszheng@hotmail.com">alviszheng@hotmail.com</a>
+                </div>
+                <div class="footer-git-hub">
+                    <a href="https://github.com/alviszheng/">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
