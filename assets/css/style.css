@@ -1,0 +1,266 @@
+/*
+*  CSS TABLE OF CONTENTS
+* 1.0 - Global variable definitions
+* 2.0 - Header
+* 3.0 - Body
+* 4.0 - Footer
+* 5.0 - Hover effects
+* 6.0 - Hero section
+* 7.0 - Flex grid
+*	7.1 - Flex grid body about me
+*	7.2 - Flex grid body work
+*	7.3 - Flex Grid Footer
+* 8.0 CSS Span
+*/
+
+
+/* Globals, universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global variable definitions */
+:root {
+  --header-footer-background: #404040;
+  --lightskyblue: lightskyblue;
+  --lightgray: lightgray;
+  --about-work-border: #333366;
+  --border-opacity: rgba(90, 138, 168, 0.8);
+
+}
+
+/* Header */
+header {
+    font-size: 1.8vw;
+    display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--header-footer-background); 
+}
+
+header a {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  color: var(--lightskyblue);
+}
+
+/* Body */
+body{
+  background-color: var(--lightgray); 
+  font-family: 'Martel', serif;
+}
+
+/* Footer */
+footer {
+  background-color: var(--header-footer-background); 
+  color: var(--lightskyblue);
+}
+
+footer a {
+  text-decoration: none;
+  border-bottom: 2px solid var(--lightskyblue); 
+  color: var(--lightskyblue);
+  font-size: 1.8vw;
+  font-weight: bold;
+}
+
+/* Hover effects */
+
+.nav-effects a:hover{ 
+  color: var(--lightskyblue);
+  font-weight: bold;
+  text-shadow: 0px 0px 20px var(--lightskyblue);
+}
+
+.work-container-grid div:hover{
+  mix-blend-mode: color-burn;
+}
+
+.footer-container a:hover{
+  color: var(--lightskyblue);
+  font-weight: bold;
+  text-shadow: 0px 0px 20px var(--lightskyblue);
+}
+
+/* Hero section */
+.hero { 
+  height: 300px;
+  background-image: url("../images/hero.jpeg");
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  align-items: flex-end;
+}
+
+.hero-subtitle { 
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+/* Start of Flex Grid */
+/* Flex grid body about me*/
+.about-me-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.about-me-grid-container {
+  width: 80%; 
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr);  /
+  grid-template-rows: repeat(4, 1fr); 
+  gap: 10px 10px; 
+}
+
+.about-me-title { 
+  padding-top: 0px;
+  font-size: 35px;
+  grid-row: 1 / span 4;
+  padding-right: 10px;
+  text-align: right;
+  border-right: 2px solid var(--about-work-border);
+}
+
+/* Flex grid body work*/
+.work-wrapper { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+.work-container-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px 10px; 
+}
+
+.work-item.work-title {
+  padding-top: 10px;
+  font-size: 35px;
+  grid-row: 1 / span 9;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 2px solid var(--about-work-border);
+}
+
+.code-refactor {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 6;
+  background-image: url("../images/hero.jpeg");
+  background-size: cover; 
+  display: grid;
+  align-items: flex-end; 
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: .25vw solid var(--border-opacity);
+  flex-wrap: wrap;
+
+}
+
+.run-buddy {
+  grid-column: 4 /span 2;
+  grid-row: 7 / span 6;
+  background-image: url("../images/hero.jpeg");
+  background-size: cover;
+  display: grid;
+  align-items: flex-end; 
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  flex-wrap: wrap;
+
+}
+
+.conflict-resolution {
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 6; 
+  background-image: url("../images/hero.jpeg");
+  background-size: cover;
+  display: grid; 
+  align-items: flex-end;
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  flex-wrap: wrap;
+
+}
+
+.robot-gladiators {
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 6;
+  background-image: url("../images/hero.jpeg");
+  background-size: 300px 200px, cover;
+  display: grid; 
+  align-items: flex-end;
+  padding-left: 0px;
+  padding-bottom: 15px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+/* Flex Grid Footer*/
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .footer-container { 
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2fr); 
+    grid-template-rows: repeat(3,2fr); 
+    gap: 20px 20px; 
+  }
+  
+  .footer-grid-item {
+    text-align: center;
+  }
+  
+  .footer-contact-me {
+    padding-top: 10px;
+    font-size: 35px;
+    grid-row: 1 / span 3;
+    text-align: right;
+    padding-right: 10px;
+    border-right: 2px solid var(--lightskyblue);
+  }
+  
+  .footer-phone,
+  .footer-email,
+  .footer-git-hub{
+    grid-row: 2;
+  }
+/* End of Flex Grid */
+
+/* CSS Span */
+.span-background {
+  position: relative;
+  line-height: 1.5;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5%;
+  opacity: .8;
+  opacity: .95;
+  font-size: 30px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
